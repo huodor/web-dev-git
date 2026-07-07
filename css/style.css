@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 :root {
-    --green: #a3cf61;
+    --green: #ADE35B;
     --green-hovered: #42857f;
 }
 
@@ -93,7 +93,7 @@ nav {
     position: absolute;
     display: flex;
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 1rem 8rem;
     z-index: 1;
 
     align-items: center; /* vertically center aligned */
@@ -116,6 +116,14 @@ nav {
     text-decoration: unset;
     text-align: center;
     color: white;
+}
+
+.white-bg-nav a {
+    color: #000000;
+}
+
+.white-bg-nav {
+    border-bottom: rgba(0, 0, 0, 0.363) solid 1px;
 }
 
 .nav-bar a:hover, 
@@ -143,38 +151,80 @@ nav {
     }
 }
 
-.two-col {
+.two-col-grid {
     display: grid;
-    /* align-items: center; */
     grid-template-columns:
-        /* auto auto; */
-        /* auto minmax(20rem, 39rem); */
         repeat(auto-fit, minmax(min(40rem, 100%), 1fr));
     gap: 3rem;
 }
 
-/* @media (max-width: 30rem) {
-    .two-col {
-        grid
+.center-align {
+    align-items: center;
+}
+
+.left-border {
+    border-left: var(--green) solid 8px;
+    padding-left: 2rem;
+}
+
+.center-justify {
+    justify-items: center;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 50rem) {
+    .card-container {
+        /* display: block; */
+        flex-direction: column;
+        justify-items: center;
+        padding: 0.5rem;
     }
-    
-} */
+}
+
+.card {
+    width: 20rem;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-items: center;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
 
 section {
     /* margin: 5rem 16rem; */
     margin-inline: clamp(1.5rem, 10vw, 16rem);
     margin-block: clamp(1.5rem, 10vw, 3rem);
+    margin-block: 10rem;
+    /* margin-inline: 20rem; */
 }
 
 h1 {
     /* margin: 0 2rem; */
     margin-bottom: 2rem;
     font-size: 3rem;
+    color: var(--green);
+    color: rgba(0, 0, 0, 0.301);
+    /* color: #a3cf61c9; */
+    /* color: rgb(183, 221, 171); */
 }
 
 p {
     font-size: clamp(1rem, 10vw, 1.2rem);
-    /* font-size: 2vw; */
+    color: rgb(80, 80, 80);
 }
 
 @media (max-width: 30rem) {
@@ -187,14 +237,12 @@ p {
         font-size: 1rem;
     }
 
-    .two-col {
-        /* display: grid; */
-        /* align-items: center; */
-        /* grid-template-columns:
-            /* auto auto; */
-            /* auto minmax(20rem, 39rem); */
-            /* repeat(auto-fit, minmax(min(40rem, 100%), 1fr)); */
+    .two-col-grid {
         gap: 1rem;
+    }
+
+    section {
+        margin-block: 4rem;
     }
 }
 
