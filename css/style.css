@@ -149,7 +149,7 @@ nav {
     grid-template-columns:
         /* auto auto; */
         /* auto minmax(20rem, 39rem); */
-        repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+        repeat(auto-fit, minmax(min(40rem, 100%), 1fr));
     gap: 3rem;
 }
 
@@ -188,12 +188,12 @@ p {
     }
 
     .two-col {
-        display: grid;
+        /* display: grid; */
         /* align-items: center; */
-        grid-template-columns:
+        /* grid-template-columns:
             /* auto auto; */
             /* auto minmax(20rem, 39rem); */
-            repeat(auto-fit, minmax(min(40rem, 100%), 1fr));
+            /* repeat(auto-fit, minmax(min(40rem, 100%), 1fr)); */
         gap: 1rem;
     }
 }
